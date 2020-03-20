@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+
+<head>
+    <meta charset="utf-8" />
+    <title> Grupa 1</title>
+    <style type="text/css">
+        button {
+            width: 150px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1 id="h"> Rozdział pierwszy</h1>
+    <p id="pierwszy" "> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nibh augue, suscipit a, scelerisque
+        sed, lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus. Phasellus pharetra nulla ac diam.
+        Quisque semper justo at risus. Donec venenatis, turpis vel hendrerit interdum, dui ligula ultricies purus, sed
+        posuere libero dui id orci. Nam congue, pede vitae dapibus aliquet, elit magna vulputate arcu, vel tempus metus
+        leo non est. Etiam sit amet lectus quis est congue mollis. <img src="pies.jpg" width="50px" id="pies" />
+        Phasellus congue lacus eget neque. Phasellus ornare, ante vitae consectetuer consequat, purus sapien ultricies
+        dolor, et mollis pede metus eget nisi. Praesent sodales velit quis augue. Cras suscipit, urna at aliquam
+        rhoncus, urna quam viverra nisi, in interdum massa nibh nec erat. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem. Etiam
+        pellentesque aliquet tellus. Phasellus pharetra nulla ac diam. Quisque semper justo at risus. Donec venenatis,
+        turpis vel hendrerit interdum, dui ligula ultricies purus, sed posuere libero dui id orci. Nam congue, pede
+        vitae dapibus aliquet, elit magna vulputate arcu, vel tempus metus leo non est. Etiam sit amet lectus quis est
+        congue mollis. Phasellus congue lacus eget neque. Phasellus ornare, ante vitae consectetuer consequat, purus
+        sapien ultricies dolor, et mollis pede metus eget nisi. Praesent sodales velit quis augue. Cras suscipit, urna
+        at aliquam rhoncus, urna quam viverra nisi, in interdum massa nibh nec erat.</p>
+    <h1>
+        <h1 id="c"> Rozdział drugi</h1>
+        <p id="drugi" class="p1" data-hover-text="Gdzie jest tekst?"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nibh augue, suscipit a,
+            scelerisque sed, lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus. Phasellus pharetra nulla
+            ac diam. Quisque semper justo at risus. Donec venenatis, turpis vel hendrerit interdum, dui ligula ultricies
+            purus, sed posuere libero dui id orci. Nam congue, pede vitae dapibus aliquet, elit magna vulputate arcu,
+            vel tempus metus leo non est. Etiam sit amet lectus quis est congue mollis. Phasellus congue lacus eget
+            neque. Phasellus ornare, ante vitae consectetuer consequat, purus sapien ultricies dolor, et mollis pede
+            metus eget nisi. Praesent sodales velit quis augue. Cras suscipit, urna at aliquam rhoncus, urna quam
+            viverra nisi, in interdum massa nibh nec erat.</p>
+        <h1 id="d"> Rozdział trzeci</h1>
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nibh augue, suscipit a, scelerisque sed,
+            lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus. Phasellus pharetra nulla ac diam. Quisque
+            semper justo at risus. Donec venenatis, turpis vel hendrerit interdum, dui ligula ultricies purus, sed
+            posuere libero dui id orci. Nam congue, pede vitae dapibus aliquet, elit magna vulputate arcu, vel tempus
+            metus leo non est. Etiam sit amet lectus quis est congue mollis. Phasellus congue lacus eget neque.
+            Phasellus ornare, ante vitae consectetuer consequat, purus sapien ultricies dolor, et mollis pede metus eget
+            nisi. Praesent sodales velit quis augue. Cras suscipit, urna at aliquam rhoncus, urna quam viverra nisi, in
+            interdum massa nibh nec erat.</p>
+        <br />
+        <button onclick="naCzerwony()"> Baton pierwszy</button>
+        <button onclick="wczesniej()"> Baton drugi</button><br /><br />
+        <button onclick="powieksz()"> Baton trzeci</button>
+        <button onclick="pomniejsz()"> Baton czwarty</button><br /><br />
+        <button onclick="ukryj() "> Baton piąty</button>
+        <button onclick="pokaz()"> Baton szósty</button>
+        <script>
+            function naCzerwony() 
+            {
+            document.getElementById("pierwszy").style.color = "red";
+            document.getElementById("pierwszy").style.fontStyle = "italic";
+            document.getElementById("pierwszy").style.fontSize = "20px";
+            document.getElementById("pierwszy").style.textAlign = "justify";
+            }
+            function wczesniej()
+            {
+                document.getElementById("pierwszy").style.color ="black";
+                document.getElementById("pierwszy").style.fontStyle = "normal";
+                document.getElementById("pierwszy").style.fontSize = "16px";
+                document.getElementById("pierwszy").style.textAlign = "left";
+            }
+            function powieksz()
+            {
+                
+                document.getElementById("pies").style.width = "100px";
+                document.getElementById("pies").style.margin = "10px";
+            }
+            function pomniejsz()
+            {  
+                document.getElementById("pies").style.width = "50px";        
+            }
+            function ukryj()
+            {
+                document.getElementById("h").style.display = "none";
+                document.getElementById("c").style.display = "none";
+                document.getElementById("d").style.display = "none";
+            }
+            function pokaz()
+            {
+                document.getElementById("h").style.display = "block";
+                document.getElementById("d").style.display = "block";
+                document.getElementById("c").style.display = "block";
+            }
+            
+            
+              
+            
+        </script>
+        <script>
+            document.getElementsByTagName('p')[1].addEventListener('mouseover', (e) => {
+                toggleText(e)
+                })
+                document.getElementsByTagName('p')[1].addEventListener('mouseout', (e) => {
+                toggleText(e)
+                })
+
+                const toggleText = e => {
+                const {target: {innerHTML: val, dataset: {hoverText}}} = e;
+                e.target.innerHTML = hoverText;
+                e.target.dataset.hoverText = val;
+                }
+        </script>
+</body>
+
+</html>
